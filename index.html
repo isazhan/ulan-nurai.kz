@@ -41,14 +41,14 @@
                         <div class="vector1"></div>
                         <div class="toiieleri">
                             <span>Той иелері:</span>
-                            Серікқан-Бақытгүл
+                            Серікхан-Бақытгүл
                         </div>
                     </div>
                     <div class="posletoiieleri"></div>
                 </div>			
             </div>
 
-            <!-- Block 1 -->
+            <!-- Block 2 -->
             <div class="blok-2 sitecontainer">
                 <div class="vector2"></div>
                 <div class="toidate">
@@ -61,6 +61,7 @@
                     <span>Тойдың мекенжайы:</span>
                     <div class="vector3"></div>
                     Алматы қ., мкр. Хан-Тенгри, 131 <br />
+                    (Квартал А, 43) <br />
                     "Тілек тас" мейрамханасы
                 </div>
                 <a target="_blank" href="https://2gis.kz/almaty/firm/9429940000801209" class="twogis">
@@ -68,6 +69,42 @@
                     2gis
                 </a>
             </div>
+
+            <!-- Block Music -->
+            <div class="sound-barer">
+                <div class="sound">
+                    <div onclick="playMusic()" class="sound-on">
+                        <img src="gif/sound-on.gif">
+                        <span>Әуенді қосу</span>
+                    </div>
+                    <div onclick="pauseMusic()" class="sound-off">
+                        <img class="sound-off-svg" src="gif/sound-off.svg">
+                        <img class="sound-off-gif" src="gif/sound-off.gif">
+                    </div>
+                </div>                
+            </div>
+
+            <audio id="bgMusic">
+                <source src="mus/music.mp3" type="audio/mpeg">
+            </audio>
+
+            <script>
+                const bgMusic = document.getElementById('bgMusic');
+                const soundOn = document.querySelector('.sound-on');
+                const soundOff = document.querySelector('.sound-off');
+
+                function playMusic() {                
+                soundOn.style.display = 'none';
+                soundOff.style.display = 'block';
+                bgMusic.play();
+                }
+
+                function pauseMusic() {                
+                soundOn.style.display = 'block';
+                soundOff.style.display = 'none';
+                bgMusic.pause();
+                }
+            </script>            
 
         </main>
     </body>
