@@ -21,7 +21,7 @@
                         <div class="firstdate">
                             <div>30 Тамыз 2025</div>
                         </div>
-                        <div class="firstname">Ұлан <span>&</span> Нұрай</div>
+                        <div class="firstname">Ulan <span>♡</span> Nurai</div>
                     </div>
                     <div class="mainphoto1"></div>
                     <div class="mainphoto2"></div>
@@ -69,6 +69,48 @@
                     2gis
                 </a>
             </div>
+
+            <!-- Block 6 -->
+            <div class="blok-6 sitecontainer">
+                <div class="blok6title">Құрметті қонақ,<br/>тойға келетініңізді растаңыз:</div>
+                <input type="hidden" name="zhauap_berdi" value="0">
+                <div class="vector1"></div>
+                <div class="opros">
+                    <!--
+                    <span>Бір нұсқаны таңдаңыз</span>-->
+                    <div id="form-1" class="zayavka">
+                        <form action="save_form.php" method="POST">
+                            <input type="hidden" name="shaqyruid" value="8888">
+                            <input type="hidden" name="konakid" value="0">
+                            <span class="spanzay">Есіміңізді жазыңыз:</span>
+                            <input class="inputname" type="text" name="name">
+                            <div class="varian-opros">
+                                <input class="custom-radio" checked type="radio" id="contactChoice1" name="zhauap" value="2">
+                                <label class="otvetyn" for="contactChoice1">Жалғыз өзім барамын</label>
+                            </div>
+                            <div class="varian-opros">
+                                <input class="custom-radio" type="radio" id="contactChoice2" name="zhauap" value="3">
+                                <label class="otvetyn" for="contactChoice2">Жұбайыммен бірге барамын</label>
+                            </div>
+                            <div class="varian-opros">
+                                <input class="custom-radio" type="radio" id="contactChoice3" name="zhauap" value="1">
+                                <label class="otvetyn" for="contactChoice3">Өкінішке қарай, келе алмаймын</label>
+                            </div>
+                            <button class="zayotrp">Жауап беру</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="otvetnaopros">
+                    <div class="otvetna">
+                        Есіміңіз: <span class="otvetname"></span><br/>
+                    </div>
+                    <div class="otvetna">
+                        Жауабыңыз: <span class="otvetzhauap"></span><br/>
+                    </div>
+                    <div class="oprosozgertu">Жауапты өзгерту</div>
+                </div>
+            </div>
+            <script src="js/attendance.js"></script>
 
             <!-- Block Music -->
             <div class="sound-barer">
