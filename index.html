@@ -79,21 +79,19 @@
                     <!--
                     <span>Бір нұсқаны таңдаңыз</span>-->
                     <div id="form-1" class="zayavka">
-                        <form action="save_form.php" method="POST">
-                            <input type="hidden" name="shaqyruid" value="8888">
-                            <input type="hidden" name="konakid" value="0">
+                        <form onsubmit="return submitForm(this)">
                             <span class="spanzay">Есіміңізді жазыңыз:</span>
                             <input class="inputname" type="text" name="name">
                             <div class="varian-opros">
-                                <input class="custom-radio" checked type="radio" id="contactChoice1" name="zhauap" value="2">
+                                <input class="custom-radio" checked type="radio" id="contactChoice1" name="zhauap" value="Жалғыз өзім барамын">
                                 <label class="otvetyn" for="contactChoice1">Жалғыз өзім барамын</label>
                             </div>
                             <div class="varian-opros">
-                                <input class="custom-radio" type="radio" id="contactChoice2" name="zhauap" value="3">
+                                <input class="custom-radio" type="radio" id="contactChoice2" name="zhauap" value="Жұбайыммен бірге барамын">
                                 <label class="otvetyn" for="contactChoice2">Жұбайыммен бірге барамын</label>
                             </div>
                             <div class="varian-opros">
-                                <input class="custom-radio" type="radio" id="contactChoice3" name="zhauap" value="1">
+                                <input class="custom-radio" type="radio" id="contactChoice3" name="zhauap" value="Бармаймын">
                                 <label class="otvetyn" for="contactChoice3">Өкінішке қарай, келе алмаймын</label>
                             </div>
                             <button class="zayotrp">Жауап беру</button>

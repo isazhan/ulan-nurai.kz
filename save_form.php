@@ -1,17 +1,20 @@
 <?php
-// Get form data
-$name = htmlspecialchars($_POST['name']);
-$shaqyruid = htmlspecialchars($_POST['shaqyruid']);
-$konakid = htmlspecialchars($_POST['konakid']);
-$zhauap = htmlspecialchars($_POST['zhauap']);
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = trim($_POST['name']);
+    $zhauap = trim($_POST['zhauap']);
 
-// Format data
-$data = "Name: $name\nShaqyruid: $shaqyruid\nKonakid: $konakid\nZhauap: $zhauap\n---\n";
+    // Combine fields into a single tab-separated line
+    $data = "$name\t$zhauap\n";
 
-// Save to file
-$file = 'responses.txt';
-file_put_contents($file, $data, FILE_APPEND | LOCK_EX);
-
-// Redirect back or show success
-echo "Thanks! Your response has been recorded.";
+    $file = 'responses.txt';
+    if (file_put_contents($file, $data, FILE_APPEND | LOCK_EX)) {
+        echo "Success";
+    } else {
+        http_response_code(500);
+        echo "Failed to write to file.";
+    }
+} else {
+    http_response_code(405);
+    echo "Method not allowed";
+}
 ?>
