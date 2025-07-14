@@ -1,7 +1,7 @@
 function submitForm(form) {
     const formData = new FormData(form);
 
-    fetch('save_form.php', {
+    fetch('attendance.php', {
         method: 'POST',
         body: formData
     })
